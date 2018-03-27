@@ -9,7 +9,6 @@
             android:layout_height="match_parent"
             android:icon="@mipmap/cadcli"
             android:title="Clientes"
-            android:onClick="onClickClientes"
             />
         <item
             android:id="@+id/nav_angenda"

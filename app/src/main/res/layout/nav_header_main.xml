@@ -28,7 +28,7 @@
         android:layout_width="147dp"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="É a nossa limpesa"
+        android:text="É a nossa limpeza"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 </LinearLayout>
