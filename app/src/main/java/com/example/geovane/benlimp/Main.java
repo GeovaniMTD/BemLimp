@@ -16,15 +16,21 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 public class Main extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-
+   implements NavigationView.OnNavigationItemSelectedListener {
+    FloatingActionButton nv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        nv = (FloatingActionButton)findViewById(R.id.btnaddserv);
+        nv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Main.this,Clientes.class));
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -90,8 +96,6 @@ public class Main extends AppCompatActivity
                 startActivity(sv);
                 break;
         }
-
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
