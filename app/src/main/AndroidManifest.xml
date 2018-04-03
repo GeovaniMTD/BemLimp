@@ -35,7 +35,10 @@
         <activity
             android:name=".MainServicos"
             android:label="@string/title_activity_main_servicos"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Maincadcli"
+            android:label="@string/title_activity_maincadcli"></activity>
     </application>
 
 </manifest>

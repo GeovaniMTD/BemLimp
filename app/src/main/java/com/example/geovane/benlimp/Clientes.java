@@ -1,5 +1,6 @@
 package com.example.geovane.benlimp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 public class Clientes extends AppCompatActivity {
 
     private Button btnCadCli;
-    private FloatingActionButton ftadd;
+    private FloatingActionButton ftadcli;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +26,19 @@ public class Clientes extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        ftadcli = (FloatingActionButton)findViewById(R.id.ftaddclien);
+        ftadcli.setOnClickListener(new View.OnClickListener() {
+            @Override 
+            public void onClick(View v) {
+                startActivity(new Intent(Clientes.this, Mainagenda.class));
+            }
+        });
+
         btnCadCli = (Button) findViewById(R.id.bntcadcli);
         btnCadCli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "TESTE", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Lista de clientes", Toast.LENGTH_SHORT).show();
             }
         });
 

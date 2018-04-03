@@ -17,7 +17,7 @@ import android.widget.Button;
 
 public class Main extends AppCompatActivity
    implements NavigationView.OnNavigationItemSelectedListener {
-    FloatingActionButton nv;
+    private FloatingActionButton nv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +41,6 @@ public class Main extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
-
-
 
     @Override
     public void onBackPressed() {

@@ -9,4 +9,8 @@
     <string name="title_activity_addcli">Adicionar Cliente</string>
     <string name="title_activity_mainagenda">Agenda</string>
     <string name="title_activity_main_servicos">Servicos</string>
+    <string name="title_activity_maincadcli">CadClie</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
