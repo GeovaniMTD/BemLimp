@@ -1,6 +1,5 @@
-package com.example.geovane.benlimp;
+package benlimp.com.br;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,40 +10,39 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class Clientes extends AppCompatActivity {
+import com.example.geovane.benlimp.R;
 
-    private Button btnCadCli;
-    private FloatingActionButton ftadcli;
+public class Mainagenda extends AppCompatActivity {
+
+    private Button btnmsgagen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cliente);
+        setContentView(R.layout.activity_main_agenda);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ftadcli = (FloatingActionButton)findViewById(R.id.ftaddclien);
-        ftadcli.setOnClickListener(new View.OnClickListener() {
-            @Override 
-            public void onClick(View v) {
-                startActivity(new Intent(Clientes.this, Mainagenda.class));
-            }
-        });
-
-        btnCadCli = (Button) findViewById(R.id.bntcadcli);
-        btnCadCli.setOnClickListener(new View.OnClickListener() {
+        btnmsgagen = (Button) findViewById(R.id.btntest);
+        btnmsgagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Lista de clientes", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "TESTE", Toast.LENGTH_SHORT).show();
             }
         });
 
-    }
 
-    @Override
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+    }
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 

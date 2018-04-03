@@ -1,4 +1,4 @@
-package com.example.geovane.benlimp;
+package benlimp.com.br;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,27 +9,28 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-public class Mainagenda extends AppCompatActivity {
 
-    private Button btnmsgagen;
+import com.example.geovane.benlimp.R;
 
+public class MainServicos extends AppCompatActivity {
+    private Button btnserv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_agenda);
+        setContentView(R.layout.activity_servicos);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        btnmsgagen = (Button) findViewById(R.id.btntest);
-        btnmsgagen.setOnClickListener(new View.OnClickListener() {
+        btnserv = (Button) findViewById(R.id.btntest2);
+        btnserv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "TESTE", Toast.LENGTH_SHORT).show();
             }
         });
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

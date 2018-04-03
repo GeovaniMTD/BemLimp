@@ -1,8 +1,8 @@
-package com.example.geovane.benlimp;
+package benlimp.com.br;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
@@ -10,34 +10,42 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainServicos extends AppCompatActivity {
-    private Button btnserv;
+import com.example.geovane.benlimp.R;
+
+public class Clientes extends AppCompatActivity {
+
+    private Button btnCadCli;
+    private FloatingActionButton ftadcli;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_servicos);
+        setContentView(R.layout.activity_cliente);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        btnserv = (Button) findViewById(R.id.btntest2);
-        btnserv.setOnClickListener(new View.OnClickListener() {
-            @Override
+        ftadcli = (FloatingActionButton)findViewById(R.id.ftaddclien);
+        ftadcli.setOnClickListener(new View.OnClickListener() {
+            @Override 
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "TESTE", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Clientes.this, MainAddcli.class));
             }
         });
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        btnCadCli = (Button) findViewById(R.id.bntcadcli);
+        btnCadCli.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Lista de clientes", Toast.LENGTH_SHORT).show();
             }
         });
+
     }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 

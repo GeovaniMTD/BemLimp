@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Main"
+            android:name="benlimp.com.br.Main"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,26 +19,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ClienteActivity" />
         <activity
-            android:name=".Clientes"
+            android:name="benlimp.com.br.Clientes"
             android:label="@string/title_activity_clientes"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Addcli"
-            android:label="@string/title_activity_addcli"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Mainagenda"
+            android:name="benlimp.com.br.Mainagenda"
             android:label="@string/title_activity_mainagenda"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainServicos"
+            android:name="benlimp.com.br.MainServicos"
             android:label="@string/title_activity_main_servicos"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Maincadcli"
-            android:label="@string/title_activity_maincadcli"></activity>
+            android:name="benlimp.com.br.Maincadcli"
+            android:label="@string/title_activity_maincadcli" />
+        <activity
+            android:name="benlimp.com.br.MainAddcli"
+            android:label="@string/title_activity_main_addcli"></activity>
     </application>
 
 </manifest>
